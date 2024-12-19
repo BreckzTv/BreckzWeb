@@ -9,6 +9,23 @@ body {
     text-align: center;
 }
 
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+
 /* Header-Stile */
 header {
     background-color: #0f0f0f;
