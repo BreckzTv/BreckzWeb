@@ -1,34 +1,32 @@
 /* Allgemeine Stile */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* Hintergrundfarbe des Body in Weiß */
-    color: #333; /* Textfarbe in Schwarz */
+    background-color: #fff; /* Hintergrundfarbe */
+    color: #333; /* Textfarbe */
     line-height: 1.6;
-    text-align: center; /* Zentrieren des gesamten Inhalts */
+    text-align: center;
+    touch-action: manipulation; /* Verhindert ungewolltes Vergrößern */
 }
 
+/* Entfernt den blauen Highlight-Effekt beim Tippen auf iOS/Android */
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Header */
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 header h1 {
     margin: 0;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     margin: 0;
@@ -54,6 +52,17 @@ nav ul li a:hover {
     background-color: #444;
 }
 
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -67,10 +76,12 @@ nav ul li a:hover {
     height: 24px;
 }
 
+/* Hauptbereich */
 main {
     padding: 20px 0;
 }
 
+/* Discord Chat */
 .discord-chat {
     text-align: center;
     background-color: #fff;
@@ -93,6 +104,7 @@ main {
     margin: 10px 0;
 }
 
+/* Buttons */
 .join-button, .donation-button {
     display: inline-block;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
@@ -108,11 +120,13 @@ main {
     background: linear-gradient(to right, #feb47b, #ff7e5f);
 }
 
+/* Google Ads */
 .adsbygoogle {
     display: block;
     margin: 20px 0;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -126,4 +140,68 @@ main {
     .search input {
         width: 100%;
     }
+}
+
+/* Mobile Navigation */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Dark Mode für iOS & Android */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #fff;
+    }
+
+    header {
+        background-color: #222;
+    }
+
+    .discord-chat {
+        background-color: #1e1e1e;
+        color: #fff;
+    }
+}
+
+/* iPhone-spezifische Optimierung */
+@supports (-webkit-touch-callout: none) {
+    body {
+        background-color: #f8f8f8;
+    }
+}
+
+/* Android-spezifische Optimierung */
+@supports not (-webkit-touch-callout: none) {
+    body {
+        background-color: #e8e8e8;
+    }
+}
+
+/* Fix für position: fixed in Safari */
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Retina-Display Optimierung */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo {
+        background-image: url('logo@2x.png');
+    }
+}
+
+/* Verhindert Zoom in Input-Feldern auf iOS */
+input, textarea {
+    font-size: 16px;
 }
