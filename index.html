@@ -5,29 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BreckzWeb</title>
     <meta name="description" content="Willkommen auf BreckzWeb. Entdecke meine Spiele, Galerie und mehr.">
-    <link rel="stylesheet" href="gaming-style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 1.5em;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-        a:hover {
-            color: #007BFF;
-        }
-    </style>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>BreckzWeb</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- Hamburger-Icon -->
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="galerie.html">Galerie</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
@@ -38,25 +27,14 @@
             </nav>
         </div>
     </header>
-    
+
     <div class="social-icons">
         <a href="https://www.instagram.com/breckztv/"><img src="instagram.png" alt="Instagram"></a>
         <a href="https://www.youtube.com/channel/UCcWAh6ZCS0S7OKn42USLq7Q"><img src="youtube.png" alt="YouTube"></a>
         <a href="https://www.tiktok.com/@breckztv?"><img src="tiktok.png" alt="TikTok"></a>
         <a href="https://www.twitch.tv/breckztv"><img src="twitch.png" alt="Twitch"></a>
     </div>
-    
-    <!-- Anzeige oben -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-4053846668307985"
-         data-ad-slot="8909444896"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    
+
     <main>
         <section>
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3eEcuAtB63P7e7k5vS189v?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -64,37 +42,35 @@
         <section class="content">
             <h2>Meine Spiele</h2>
             <p>Hier sind einige meiner Lieblingsspiele:</p>
-                <p>Counter Strike 2</p>
-                <p>Brawlhallah</p>
-                <p>Minecraft</p>
-                <p>Albion Online</p>
-        
+            <ul>
+                <li>Counter Strike 2</li>
+                <li>Brawlhallah</li>
+                <li>Minecraft</li>
+                <li>Albion Online</li>
+            </ul>
             <img src="logo.webp" alt="BreckzTv" width="300" height="300">
-            <br>
+            
             <section>
                 <p>Hier geht es zu meinem Shop:</p>
                 <a href="https://breckztv-shop.myspreadshop.de/" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-shopping-cart"></i> BreckzTvShop
                 </a>
             </section>
-            <br>
+
             <section>
-                <p>Hier geht es zu meinem Shop:</p>
+                <p>Hier geht es zu meinem zweiten Shop:</p>
                 <a href="https://b-shop.myspreadshop.de/" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-shopping-cart"></i> Biggest Shop
                 </a>
             </section>
-            <br>
+
             <section>
-                <p>
-                    Hier könnt ihr mir Geschenke machen.
-                </p>
+                <p>Hier könnt ihr mir Geschenke machen:</p>
                 <a href="https://www.amazon.de/hz/wishlist/ls/6FA6V69BZ4IA?ref_=wl_share" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-shopping-cart"></i> Meine wishlist 
+                    <i class="fas fa-gift"></i> Meine Wishlist
                 </a>
             </section>
-            
-            <br>
+
             <div class="discord-server">
                 <h3>Discord</h3>
                 <p>Tretet jetzt meinem Discord Server bei:</p>
@@ -102,17 +78,6 @@
                 <a class="donation-button" href="https://www.paypal.com/paypalme/BurhanDakdevir">Spenden</a>
             </div>
         </section>
-        
-        <!-- Anzeige unten -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4053846668307985"
-             data-ad-slot="8909444896"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
     </main>
 </body>
 </html>
