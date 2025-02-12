@@ -1,3 +1,6 @@
+Hier ist der vollständige, überarbeitete Code mit allen Verbesserungen und Anpassungen:
+
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -8,13 +11,19 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://open.spotify.com">
+    <link rel="preconnect" href="https://www.instagram.com">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://www.tiktok.com">
+    <link rel="preconnect" href="https://www.twitch.tv">
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>BreckzWeb</h1>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div> <!-- Hamburger-Icon -->
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -27,13 +36,6 @@
             </nav>
         </div>
     </header>
-
-    <div class="social-icons">
-        <a href="https://www.instagram.com/breckztv/"><img src="instagram.png" alt="Instagram"></a>
-        <a href="https://www.youtube.com/channel/UCcWAh6ZCS0S7OKn42USLq7Q"><img src="youtube.png" alt="YouTube"></a>
-        <a href="https://www.tiktok.com/@breckztv?"><img src="tiktok.png" alt="TikTok"></a>
-        <a href="https://www.twitch.tv/breckztv"><img src="twitch.png" alt="Twitch"></a>
-    </div>
 
     <main>
         <section>
@@ -48,25 +50,25 @@
                 <li>Minecraft</li>
                 <li>Albion Online</li>
             </ul>
-            <img src="logo.webp" alt="BreckzTv" width="300" height="300">
+            <img src="logo.webp" alt="BreckzTv Logo" width="300" height="300" loading="lazy">
             
             <section>
                 <p>Hier geht es zu meinem Shop:</p>
-                <a href="https://breckztv-shop.myspreadshop.de/" target="_blank" rel="noopener noreferrer">
+                <a href="https://breckztv-shop.myspreadshop.de/" target="_blank" rel="noopener noreferrer" aria-label="BreckzTv Shop">
                     <i class="fas fa-shopping-cart"></i> BreckzTvShop
                 </a>
             </section>
 
             <section>
                 <p>Hier geht es zu meinem zweiten Shop:</p>
-                <a href="https://b-shop.myspreadshop.de/" target="_blank" rel="noopener noreferrer">
+                <a href="https://b-shop.myspreadshop.de/" target="_blank" rel="noopener noreferrer" aria-label="Biggest Shop">
                     <i class="fas fa-shopping-cart"></i> Biggest Shop
                 </a>
             </section>
 
             <section>
                 <p>Hier könnt ihr mir Geschenke machen:</p>
-                <a href="https://www.amazon.de/hz/wishlist/ls/6FA6V69BZ4IA?ref_=wl_share" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.amazon.de/hz/wishlist/ls/6FA6V69BZ4IA?ref_=wl_share" target="_blank" rel="noopener noreferrer" aria-label="Meine Wishlist">
                     <i class="fas fa-gift"></i> Meine Wishlist
                 </a>
             </section>
@@ -74,10 +76,45 @@
             <div class="discord-server">
                 <h3>Discord</h3>
                 <p>Tretet jetzt meinem Discord Server bei:</p>
-                <a class="join-button" href="https://discord.gg/ujYKbt6CQH">Zum Discord Server</a>
-                <a class="donation-button" href="https://www.paypal.com/paypalme/BurhanDakdevir">Spenden</a>
+                <a class="join-button" href="https://discord.gg/ujYKbt6CQH" target="_blank" rel="noopener noreferrer">Zum Discord Server</a>
+                <a class="donation-button" href="https://www.paypal.com/paypalme/BurhanDakdevir" target="_blank" rel="noopener noreferrer">Spenden</a>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/breckztv/" target="_blank" rel="noopener noreferrer"><img src="instagram.png" alt="Instagram Icon"></a>
+            <a href="https://www.youtube.com/channel/UCcWAh6ZCS0S7OKn42USLq7Q" target="_blank" rel="noopener noreferrer"><img src="youtube.png" alt="YouTube Icon"></a>
+            <a href="https://www.tiktok.com/@breckztv?" target="_blank" rel="noopener noreferrer"><img src="tiktok.png" alt="TikTok Icon"></a>
+            <a href="https://www.twitch.tv/breckztv" target="_blank" rel="noopener noreferrer"><img src="twitch.png" alt="Twitch Icon"></a>
+        </div>
+        <p>&copy; 2025 BreckzWeb. Alle Rechte vorbehalten.</p>
+        <ul>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+    </footer>
+
+    <div class="loading-spinner" id="loading-spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
+```
+
+### Erläuterungen:
+1. **Accessibility**: `aria-label` und `alt`-Attribute wurden hinzugefügt, um die Barrierefreiheit zu verbessern.
+2. **Performance**: `loading="lazy"` für Bilder und `preconnect` für externe Ressourcen.
+3. **Responsive Design**: Der Hamburger-Menü-Button und die Navigation sind jetzt besser für mobile Geräte optimiert.
+4. **Footer**: Ein Footer mit Social-Media-Icons, Copyright-Hinweis und Links zum Impressum und Datenschutz wurde hinzugefügt.
+5. **JavaScript**: Die `toggleMenu()`-Funktion wurde direkt im HTML eingebettet, um das Menü zu steuern.
+
+Falls du weitere Anpassungen oder Erklärungen benötigst, lass es mich wissen! 😊
