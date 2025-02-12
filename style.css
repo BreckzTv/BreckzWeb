@@ -7,8 +7,8 @@
 }
 
 body {
-    background-color: #121212; /* Dark Mode */
-    color: #ffffff;
+    background-color: #f5f5f5; /* Heller Hintergrund */
+    color: #333;
     text-align: center;
 }
 
@@ -17,14 +17,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1e1e1e;
+    background: #007BFF;
     padding: 15px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
     font-size: 1.8em;
     font-weight: bold;
+    color: white;
 }
 
 /* 🔽 Navigation */
@@ -32,6 +33,7 @@ header h1 {
     list-style: none;
     display: flex;
     gap: 15px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .nav-links li {
@@ -47,7 +49,7 @@ header h1 {
 }
 
 .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
 }
 
@@ -56,16 +58,17 @@ header h1 {
     font-size: 28px;
     cursor: pointer;
     display: none;
-    background: #007BFF;
+    background: white;
     padding: 10px 15px;
     border-radius: 50%;
-    color: white;
+    color: #007BFF;
     transition: background 0.3s, transform 0.2s;
 }
 
 .menu-toggle:hover {
     background: #0056b3;
     transform: scale(1.1);
+    color: white;
 }
 
 /* 🖼️ Social Icons */
@@ -79,7 +82,6 @@ header h1 {
 .social-icons a img {
     width: 30px;
     height: 30px;
-    filter: invert(1);
     transition: transform 0.3s;
 }
 
@@ -92,47 +94,42 @@ main {
     padding: 20px;
 }
 
-h2 {
-    color: #ffcc00;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.2em;
-}
-
-/* 🛍️ Shop Buttons */
+/* 🛍️ Buttons mit Material Design */
 .join-button, .donation-button {
     display: inline-block;
     background: linear-gradient(to right, #ff9800, #ff5722);
     color: white;
-    padding: 12px 20px;
-    margin: 10px;
+    padding: 12px 25px;
+    margin: 15px;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .join-button:hover, .donation-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0px 6px 15px rgba(255, 87, 34, 0.6);
 }
 
-/* 🎮 Discord Box */
-.discord-server {
-    background: #1e1e1e;
+/* 🎮 Material Design Karten-Style für Discord und Shops */
+.card {
+    background: white;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     margin: 20px auto;
-    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 500px;
 }
 
-/* 📱 Responsive Design */
+.card h3 {
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+/* 📱 Responsives Design */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -143,7 +140,7 @@ p {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background: #1e1e1e;
+        background: #007BFF;
         position: absolute;
         top: 60px;
         left: 0;
@@ -158,5 +155,6 @@ p {
 
     .nav-links.show {
         display: flex;
+        opacity: 1;
     }
 }
