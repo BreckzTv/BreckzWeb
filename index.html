@@ -1,63 +1,75 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BreckzWeb</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BreckzWeb</title>
+
+  <!-- AdSense Account Verifikation -->
+  <meta name="google-adsense-account" content="ca-pub-4053846668307985">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="coockies.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>BreckzWeb</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="content.html">Content</a></li>
-                    <li><a href="musik.html">Musik</a></li>
-                    <li><a href="games.html">Games</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="impressum.html">Impressum</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <section>
-            <h2>BreckzTv – Content Creator & Musiker</h2>
-            <p>Willkommen auf meiner offiziellen Webseite! Hier findest du alle meine Inhalte, 
-                Streams und Musik an einem Ort. Tritt meiner Community bei und bleib auf dem Laufenden!</p>
-        </section>
+  <div id="cookieConsent" style="display: none;">
+    Diese Website verwendet Cookies, um die Benutzererfahrung zu verbessern und Anzeigen von Google AdSense anzuzeigen. 
+    <button onclick="acceptCookies()">Akzeptieren</button> 
+    <button onclick="declineCookies()">Ablehnen</button>
+  </div>
 
-        <section class="social-icons">
-            <a href="https://www.youtube.com/@breckztv"><img src="youtube.png" alt="YouTube"></a>
-            <a href="https://twitch.tv/breckztv"><img src="twitch.png" alt="Twitch"></a>
-            <a href="https://instagram.com/breckztv"><img src="instagram.png" alt="Instagram"></a>
-            <a href="https://spotify.com/artist/Burhan_Einsnull"><img src="spotify.png" alt="Spotify"></a>
-        </section>
-    </main>
+  <header>
+    <div class="container">
+      <h1>BreckzWeb</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="musik.html">Musik</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        <div class="footer-container">
-            <h2>BreckzTv</h2>
-            <p>Content Creator, Streamer und Musiker aus Deutschland. 
-               Ich liebe Gaming, Musik und den Austausch mit meiner Community!</p>
+  <main>
+    <section>
+      <h2>BreckzTv – Content Creator & Musiker</h2>
+      <p>Willkommen auf meiner offiziellen Webseite! Hier findest du alle meine Inhalte, Streams und Musik an einem Ort. Tritt meiner Community bei und bleib auf dem Laufenden!</p>
+    </section>
 
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="content.html">Content</a></li>
-                <li><a href="musik.html">Musik</a></li>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="impressum.html">Impressum</a></li>
-            </ul>
+    <!-- Bereich für Google AdSense -->
+    <section id="adsense-container"></section>
 
-            <p><strong>Geschäftliche Anfragen:</strong> <a href="mailto:breckztv@gmail.com">breckztv@gmail.com</a></p>
-            <p>© 2025 BreckzTv. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
+    <section class="social-icons">
+      <a href="https://www.youtube.com/@breckztv"><img src="youtube.png" alt="YouTube"></a>
+      <a href="https://twitch.tv/breckztv"><img src="twitch.png" alt="Twitch"></a>
+      <a href="https://instagram.com/breckztv"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://spotify.com/artist/Burhan_Einsnull"><img src="spotify.png" alt="Spotify"></a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <h2>BreckzTv</h2>
+      <p>Content Creator, Streamer und Musiker aus Deutschland. Ich liebe Gaming, Musik und den Austausch mit meiner Community!</p>
+
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="content.html">Content</a></li>
+        <li><a href="musik.html">Musik</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+
+      <p><strong>Geschäftliche Anfragen:</strong> <a href="mailto:breckztv@gmail.com">breckztv@gmail.com</a></p>
+      <p>© 2025 BreckzTv. Alle Rechte vorbehalten.</p>
+    </div>
+  </footer>
 </body>
 </html>
