@@ -118,6 +118,21 @@ main p {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
+/*Download Button*/
+.download-btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #cc5200;
+}
 
 /* --- Footer --- */
 footer {
@@ -180,3 +195,4 @@ footer p {
     margin-top: 1rem;
   }
 }
+
